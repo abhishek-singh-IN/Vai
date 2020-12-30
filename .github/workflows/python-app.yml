@@ -26,6 +26,7 @@ jobs:
         pip install wheel
         sudo apt-get install portaudio19-dev python-pyaudio python3-pyaudio
         pip install -r requirements.txt;
+        python3 -c "import nltk;nltk.download('stopwords')"
     - name: start the Application
       run: |
         python3 app.py
