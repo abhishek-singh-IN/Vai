@@ -11,7 +11,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 with open('intents.json', 'r') as json_data:
     intents = json.load(json_data)
 
-with open('/home/abhishek/Projects/Vai/NLU/history.json', 'r') as json_data:
+with open('history.json', 'r') as json_data:
     history = json.load(json_data)
 
 FILE = "NLU/neuralnet.pth"
