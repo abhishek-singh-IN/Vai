@@ -1,8 +1,5 @@
-
 import json
 import random
-import json
-
 import torch
 from model import *
 from nltk_utils import bag_of_words, tokenize
@@ -11,7 +8,7 @@ with open('NLU/intents.json', 'r') as json_data:
 
 from utility import openn
 from utility import searching
-from utility import setusername
+# from utility import setusername
 
 def answer(tag,query):
 	if tag=="open":
@@ -33,7 +30,4 @@ def answer(tag,query):
 	         if tag == intent["tag"]:
 	             print(f"{random.choice(intent['responses'])}")
 	             return (f"{random.choice(intent['responses'])}")
-
-
-
 
