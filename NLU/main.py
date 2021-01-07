@@ -1,6 +1,7 @@
 import random
 import json
 import torch
+import os
 import webbrowser
 from model import *
 from nltk_utils import bag_of_words, tokenize
@@ -8,10 +9,10 @@ from result import answer
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('intents.json', 'r') as json_data:
+with open(os.getcwd() +'/NLU/intents.json', 'r') as json_data:
     intents = json.load(json_data)
 
-with open('history.json', 'r') as json_data:
+with open(os.getcwd() +'/NLU/history.json', 'r') as json_data:
     history = json.load(json_data)
 
 FILE = "NLU/neuralnet.pth"
