@@ -6,6 +6,9 @@ from flask import Flask, render_template, jsonify,request
 from flask_sqlalchemy import SQLAlchemy
 import warnings
 import os
+import nltk
+
+nltk.download('stopwords')
 warnings.filterwarnings("ignore")  
 
 sys.path.append(os.path.join(os.getcwd(),'NLU'))
@@ -71,4 +74,4 @@ def nlu():
 
 
 if __name__ == '__main__':
-	app.run(debug=True,port=3001)
+	app.run(debug=True,port=80)
